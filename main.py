@@ -7,9 +7,10 @@ import os
 from dotenv import load_dotenv
 
 # Loading API keys from .env file
-load_dotenv()
-gpt_api_key = os.getenv("GPT_API_KEY")
+# load_dotenv()
+# gpt_api_key = os.getenv("GPT_API_KEY")
 
+gpt_api_key = st.secrets["OPENAI_API_KEY"]
 
 # Content summarization using GPT API
 def summarize_text(prompt, max_tokens=200, temperature=0.3, top_p=0.2):
